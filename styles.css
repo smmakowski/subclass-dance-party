@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url('assets/skyline.jpg');
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -16,12 +17,31 @@ body, a:link, a:visited, a:active{
 .topbar{
   height:32px;
   background-color: #555;
+  font-family: Arial;
 }
 .title{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  height:100px
+  width: 100px;
   position:absolute;
+}
+.big{
+  height: 300px;
+  width: 300px;
+}
+.rotate{
+  -webkit-transform: rotate(-45deg);
+}
+.sizy{
+  height: 200px;
+  width: 200px;
+  margin: 0px;
+  background-image: url('assets/sizy.jpg');
+  background-size: cover;
+}
+
+.rotate2{
+  -webkit-transform: rotate(45deg);
 }
