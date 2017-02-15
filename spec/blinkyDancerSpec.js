@@ -12,19 +12,19 @@ describe('blinkyDancer', function() {
     expect(blinkyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should store top and left in properties', function() {
-    expect(blinkyDancer.left).to.be.equal(20);
-    expect(blinkyDancer.top).to.be.equal(10);
-  });
-
-  it('blinkyDancer should proend node of class dancer to body', function() {
-    expect(blinkyDancer.$node.attr('class')).to.be.equal('dancer');
-  });
-
   it('should have a step function that makes its node blink', function() {
     sinon.spy(blinkyDancer.$node, 'toggle');
     blinkyDancer.step();
     expect(blinkyDancer.$node.toggle.called).to.be.true;
+  });
+
+  it('ADDL: should store top and left in properties', function() {
+    expect(blinkyDancer.left).to.be.equal(20);
+    expect(blinkyDancer.top).to.be.equal(10);
+  });
+
+  it('ADDL: blinkyDancer should propend node of class dancer to body', function() {
+    expect(blinkyDancer.$node.attr('class')).to.be.equal('dancer');
   });
 
   describe('dance', function() {

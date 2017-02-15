@@ -26,7 +26,6 @@ body, a:link, a:visited, a:active{
   height:100px
   width: 100px;
   position:absolute;
-  z-index: -1000;
 }
 .big{
   height: 300px;
