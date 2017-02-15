@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  var lined = false;
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -21,19 +22,37 @@ $(document).ready(function() {
 
     // make a dancer with a random position
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 3000
     );
     $('body').append(dancer.$node);
   });
-  $('.line').on('click', function(event) {
-    var $dancer = $('dancer');
-    jQuery.each($dancer, function(){
 
+  $('.line').on('click', function(event) {
+    var $dancer = $('.dancer');
+
+    jQuery.each($dancer, function() {
+      $dancer.css({'top': '30%'});
     });
-  })
+  });
+
+  $(document).on('mouseover', '.dancer', function(event) {
+    $(this).remove();
+  });
 
 
 });
 
+
+
+// makeDancer.prototype.setPosition = function(top, left) {
+//     // Use css top and left properties to position our <span> tag
+//     // where it belongs on the page. See http://api.jquery.com/css/
+//     //
+//   var styleSettings = {
+//     top: this.top,
+//     left: this.left
+//   };
+//   this.$node.css(styleSettings);
+// };
