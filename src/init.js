@@ -27,6 +27,8 @@ $(document).ready(function() {
       Math.random() * 3000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
+    console.log(window.dancers);
   });
 
   $('.line').on('click', function(event) {
@@ -37,8 +39,17 @@ $(document).ready(function() {
     });
   });
 
-  $(document).on('mouseover', '.dancer', function(event) {
+  $(document).on('click', '.dancer', function(event) {
     $(this).remove();
+  });
+
+  $(document).on('mouseover', '.dancer', function(event) {
+    $(this).siblings().css({'left': $(this).css('left')});
+
+    // variable for this dancer's left position
+    // compare this dancer's left to other dancers' left
+    // find closest left
+    // make this dancer's left equal to closest left
   });
 
 
