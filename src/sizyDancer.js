@@ -7,7 +7,7 @@ var makeSizyDancer = function(top, left, timeBetweenSteps) {
 };
 
 makeSizyDancer.prototype = Object.create(makeDancer.prototype);
-makeSizyDancer.prototype.constructor = makeBlinkyDancer;
+makeSizyDancer.prototype.constructor = makeSizyDancer;
 
 
 makeSizyDancer.prototype.step = function() {
@@ -17,5 +17,5 @@ makeSizyDancer.prototype.step = function() {
     // toggle() is a jQuery method to show/hide the <span> tag.
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.html('<img src="assets/sizy.png">').slideToggle();
+  this.$node.html('<img src="assets/kebab.gif">').slideToggle();
 };

@@ -7,7 +7,7 @@ var makeTwistyDancer = function(top, left, timeBetweenSteps) {
 };
 
 makeTwistyDancer.prototype = Object.create(makeDancer.prototype);
-makeTwistyDancer.prototype.constructor = makeBlinkyDancer;
+makeTwistyDancer.prototype.constructor = makeTwistyDancer;
 
 
 makeTwistyDancer.prototype.step = function() {
@@ -17,6 +17,6 @@ makeTwistyDancer.prototype.step = function() {
     // toggle() is a jQuery method to show/hide the <span> tag.
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.html('<img class="dancer" src="assets/twisty.png">').toggleClass('rotate');
+  this.$node.html('<img class="dancer" src="assets/falafel.gif">').toggleClass('rotate');
   this.$node.slideToggle();
 };
